@@ -2,11 +2,11 @@ package ex2;
 
 import java.util.concurrent.ArrayBlockingQueue;
 
-public class BlockingBuffer {
+public class CheckoutQueue {
     // Shared buffer representing the checkout line
     private final ArrayBlockingQueue<Integer> queue;
 
-    public BlockingBuffer(int capacity) {
+    public CheckoutQueue(int capacity) {
         queue = new ArrayBlockingQueue<Integer>(capacity);
     }
 

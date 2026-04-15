@@ -12,7 +12,7 @@ public class BlockingBufferTest {
         ExecutorService executorService = Executors.newCachedThreadPool();
 
         // create SynchronizedBuffer to store ints
-        Buffer sharedLocation = new BlockingBuffer();
+        Buffer sharedLocation = new CheckoutQueue();
 
         executorService.execute(new Producer(sharedLocation));
         executorService.execute(new Consumer(sharedLocation));
